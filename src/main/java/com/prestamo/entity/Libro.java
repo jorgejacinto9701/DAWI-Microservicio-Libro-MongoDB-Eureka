@@ -48,5 +48,4 @@ public class Libro {
 
     @Field(name = "categories")
     private List<String> categories;
-	
 }

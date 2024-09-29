@@ -20,8 +20,20 @@ public class LibroServiceImpl implements LibroService{
 	}
 
 	@Override
-	public Libro listaPorIsbn(String isbn) {
+	public List<Libro> listaPorIsbn(String isbn) {
 		return libroRepository.listaPorIsbn(isbn);
 	}
 
+	@Override
+	public List<Libro> listaPorCategories(List<String> categories) {
+		return libroRepository.listaPorCategories(categories);
+	}
+
+	@Override
+	public List<Libro> listaPorShortDescriptionLike(String shortDescription) {
+		return libroRepository.listaPorShortDescriptionLike(shortDescription);
+	}
+
 }
+
+

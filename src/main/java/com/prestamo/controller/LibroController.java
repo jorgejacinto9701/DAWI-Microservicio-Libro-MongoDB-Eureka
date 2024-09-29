@@ -18,14 +18,26 @@ public class LibroController {
 	@Autowired
 	private LibroService libroService;
 	
-	@GetMapping("/lista")
-	public List<Libro> findAll() {
+	
+	@GetMapping("/listar")
+	public List<Libro> listar() {
 		return libroService.findAll();
 	}
 	
-	@GetMapping("/listaPorIsbn/{isbn}")
-	public Libro listaPorIsbn(@PathVariable String isbn) {
+	@GetMapping("/listarPorIsbn/{isbn}")
+	public List<Libro> listarPorIsbn(@PathVariable String isbn) {
 		return libroService.listaPorIsbn(isbn);
 	}
 	
+	@GetMapping("/listarPorCategories/{categories}")
+	public List<Libro> listarPorCategories(@PathVariable List<String> categories) {
+		return libroService.listaPorCategories(categories);
+	}
+	
+	@GetMapping("/listarPorShortDescriptionLike/{shortDescription}")
+	public List<Libro> listarPorShortDescriptionLike(@PathVariable String shortDescription) {
+		return libroService.listaPorShortDescriptionLike(shortDescription);
+	}
 }
+
+
