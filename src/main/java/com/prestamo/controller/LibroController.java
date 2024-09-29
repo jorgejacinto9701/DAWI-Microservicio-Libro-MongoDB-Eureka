@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,16 +19,13 @@ public class LibroController {
 	private LibroService libroService;
 	
 	@GetMapping("/lista")
-	public List<Libro> listaLibro() {
-		return libroService.listaLibro();
+	public List<Libro> findAll() {
+		return libroService.findAll();
 	}
 	
-	@GetMapping("/listaPorIsbn/{id}")
-	public List<Libro> listaPorIsbn(String id) {
-		return libroService.listaLibroPorIsbn(id);
+	@GetMapping("/listaPorIsbn/{isbn}")
+	public Libro listaPorIsbn(@PathVariable String isbn) {
+		return libroService.listaPorIsbn(isbn);
 	}
-	
 	
 }
-
-

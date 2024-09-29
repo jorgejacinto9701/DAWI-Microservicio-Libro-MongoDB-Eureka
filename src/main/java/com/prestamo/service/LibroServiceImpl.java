@@ -12,17 +12,16 @@ import com.prestamo.repository.LibroRepository;
 public class LibroServiceImpl implements LibroService{
 
 	@Autowired
-	private LibroRepository libroRepository; 
+	private LibroRepository libroRepository;
 	
 	@Override
-	public List<Libro> listaLibro() {
+	public List<Libro> findAll() {
 		return libroRepository.findAll();
 	}
 
 	@Override
-	public List<Libro> listaLibroPorIsbn(String isbn) {
+	public Libro listaPorIsbn(String isbn) {
 		return libroRepository.listaPorIsbn(isbn);
 	}
 
-	
 }

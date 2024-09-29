@@ -17,35 +17,36 @@ import lombok.Setter;
 public class Libro {
 
 	@Id
-	private ObjectId _id;
+    private ObjectId _id;
 
-	@Field(name = "title")
-	private String title;
+    @Field(name = "title")
+    private String title;
 
-	@Field(name = "isbn")
-	private String isbn;
+    @Field(name = "isbn")
+    private String isbn;
 
-	@Field(name = "pageCount")
-	private int pageCount;
+    @Field(name = "pageCount")
+    private int pageCount;
 
-	@Field(name = "publishedDate")
-	private Date publishedDate;
+    @Field(name = "publishedDate")
+    private Date publishedDate;
 
-	@Field(name = "thumbnailUrl")
-	private String thumbnailUrl;
+    @Field(name = "thumbnailUrl")
+    private String thumbnailUrl;
 
-	@Field(name = "shortDescription")
-	private String shortDescription;
+    @Field(name = "shortDescription")
+    private String shortDescription;
 
-	@Field(name = "longDescription")
-	private String longDescription;
+    @Field(name = "longDescription")
+    private String longDescription;
 
-	@Field(name = "status")
-	private String status;
+    @Field(name = "status")
+    private String status;
 
-	@Field(name = "authors")
-	private List<String> authors;
+    @Field(name = "authors")
+    private List<String> authors;
 
-	@Field(name = "categories")
-	private List<String> categories;
+    @Field(name = "categories")
+    private List<String> categories;
+	
 }
